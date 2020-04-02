@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId APPLICATION_ID
+        applicationId "com.jibres.android"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 12
@@ -13,19 +13,19 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        release {
-            storeFile file(STORE_FILE)
-            storePassword STORE_PASSWORD
-            keyAlias KEY_ALIAS
-            keyPassword KEY_PASSWORD
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file(STORE_FILE)
+//            storePassword STORE_PASSWORD
+//            keyAlias KEY_ALIAS
+//            keyPassword KEY_PASSWORD
+//        }
+//    }
 
     buildTypes {
         release {
             minifyEnabled true
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
