@@ -99,7 +99,7 @@ public class SplashActivity extends AppCompatActivity {
         try {
             String from = "#ffffff", to = "#ffffff";
             int style = 1;
-            JSONObject object = new JSONObject(JsonManager.getJsonSplash(getApplication()));
+                JSONObject object = new JSONObject(JsonManager.getJsonSplash(getApplication()));
             if (!object.isNull("theme")) {
                 switch (object.getString("theme")) {
                     case "Jibres":
@@ -176,14 +176,14 @@ public class SplashActivity extends AppCompatActivity {
     String getAppLanguage() {
         return AppManager.getAppLanguage(getApplication());
     }
-
-    void setAppLanguage(String key) {
-        AppManager.get(getApplication()).setAppLanguage(key);
-    }
-
-    void setEndPoint(String url) {
-        UrlManager.save_endPoint(getApplication(), url);
-    }
+//    unused
+//    void setAppLanguage(String key) {
+//        AppManager.get(getApplication()).setAppLanguage(key);
+//    }
+//
+//    void setEndPoint(String url) {
+//        UrlManager.save_endPoint(getApplication(), url);
+//    }
 
     int getSplash() {
         return AppManager.get(getApplication()).getUserInfo_int().get(AppManager.splash);
